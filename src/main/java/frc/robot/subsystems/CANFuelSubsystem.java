@@ -24,17 +24,17 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class CANFuelSubsystem extends SubsystemBase {
 
-  private final SparkMax mainRoller;
-  private final VictorSP feederRoller;
+  private final VictorSP mainRoller;
+  private final SparkMax feederRoller;
 
   public CANFuelSubsystem() {
 
     var config = new SparkMaxConfig();
     config.inverted(true);
 
-    mainRoller = new SparkMax(MAIN_ROLLER_ID, MotorType.kBrushless);
-    mainRoller.configure(config, ResetMode.kResetSafeParameters,PersistMode.kPersistParameters);
-    feederRoller = new VictorSP(FEEDER_ROLLER_ID);
+    feederRoller = new SparkMax(MAIN_ROLLER_ID, MotorType.kBrushless);
+    feederRoller.configure(config, ResetMode.kResetSafeParameters,PersistMode.kPersistParameters);
+    mainRoller = new VictorSP(FEEDER_ROLLER_ID);
     
     feederRoller.setInverted(true);
   }

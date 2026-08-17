@@ -49,7 +49,7 @@ public class RobotContainer {
     // Operator Controller        
 
     // RightBumper gira apenas o Shooter
-    operatorController.rightBumper()
+    driverController.rightBumper()
         .whileTrue(ballSubsystem.shoot(() -> 1))
         .whileFalse(ballSubsystem.run(ballSubsystem::stop));
 

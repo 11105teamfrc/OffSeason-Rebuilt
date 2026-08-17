@@ -6,18 +6,18 @@ public final class Constants {
 
     // Motor controller IDs for drivetrain motors
 
-    public static final int LEFT_LEADER_ID = 6;
-    public static final int LEFT_FOLLOWER_ID = 4;
-    public static final int RIGHT_LEADER_ID = 1;
-    public static final int RIGHT_FOLLOWER_ID = 3;
+    public static final int LEFT_LEADER_ID = 1;
+    public static final int LEFT_FOLLOWER_ID = 3;
+    public static final int RIGHT_LEADER_ID = 4;
+    public static final int RIGHT_FOLLOWER_ID = 2;
     
   }
 
   public static final class FuelConstants {
 
     // CAN IDs  
-    public static final int MAIN_ROLLER_ID = 2; // intake + launch
-    public static final int FEEDER_ROLLER_ID = 0; // feeder + outtake - VictorSP
+    public static final int FEEDER_ROLLER_ID = 0; // shoot
+    public static final int MAIN_ROLLER_ID = 6; // feeder + outtake - VictorSP
 
     // Voltages (VELOCIDADE)
     public static final double INTAKE_MAIN_VOLTAGE  = 6.0;
@@ -41,11 +41,6 @@ public final class Constants {
   }
 
   public static final class ShooterConstants {
-
-    public static final double kShooterToleranceRPS = 5;
-
-    public static int[] kEncoderPorts = {2, 3};
-    public static final boolean kEncoderReversed = false;
 
     // teste
     public static double kForward = 5.0;
